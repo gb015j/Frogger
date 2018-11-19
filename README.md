@@ -3,7 +3,11 @@
 ## Table of Contents
 
 - [Instructions](#instructions)
+ Open the index.html file in a browser to start playing!
+ Get 10 points to win the game
+ Use arrows keys to move your character
 - [Contributing](#contributing)
+If you wish to contribute please create a pull request to https://github.com/gb015j/Frogger
 
 ## Instructions
 

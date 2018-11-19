@@ -38,16 +38,23 @@ var Player = function() {
 
 }
 
+// Updates the player and alerts the user if they have scored 10
 Player.prototype.update = function() {
     this.x = 200;
     this.y = 380;
     this.score = this.score + 1;
+    if (this.score == 10) {
+        alert("You have won!!");
+        this.score = 0;
+    }
 }
 
+// Draws the player
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
+// Method that moves the player baced on what arrow key is pressed
 Player.prototype.handleInput = function(keyPress) {
     if ( keyPress === 'left' ) {
         if ( this.x > 0 ) {
@@ -67,6 +74,7 @@ Player.prototype.handleInput = function(keyPress) {
         } 
     }
 };
+// Resets the player and score
 Player.prototype.reset = function() {
     this.x = 200;
     this.y = 380;
@@ -86,6 +94,7 @@ for (var i = 0; i < 7; i++) {
 
 var player = new Player();
 
+// Returns a random number
 function random(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }

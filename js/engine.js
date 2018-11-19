@@ -99,6 +99,7 @@ var Engine = (function(global) {
         doc.getElementById('score').innerHTML = player.score;
     } 
     
+    // Resets the player if it collides with an enemy
     function checkCollisions() {
         allEnemies.forEach(function(enemy) {
             if ( Math.round(enemy.x / 100) === Math.round(player.x / 100) && 
